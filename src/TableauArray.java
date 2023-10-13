@@ -5,7 +5,9 @@ import java.util.Random;
 
 public class TableauArray {
 
-    private ArrayList<Integer> tab;/**https://www.w3schools.com/java/java_arraylist.asp */
+    private ArrayList<Integer> tab;
+
+    /** https://www.w3schools.com/java/java_arraylist.asp */
 
     /** creation d un constructeur personnaliser */
 
@@ -28,21 +30,22 @@ public class TableauArray {
         }
     }
 
-    /**Le Menu */
-    public void Affichage(){
+    /** Le Menu */
+    public void Affichage() {
         // Le menu de l interface utilisateur
-            System.out.println("\n Menu :");
-            System.out.println("1. Entrez 1 afficher avec ArrayList");
-            System.out.println("2. Entrez 2 Afficher avec LiinkedList");
-            System.out.println("3. Entrez 3 pour revenir au menu");
-            System.out.println("4. Entrez 4 pour Quitter");
-            System.out.print(" choisissez une option : ");
-            
+        System.out.println("\n Menu :");
+        System.out.println("1. Entrez 1 afficher avec ArrayList");
+        System.out.println("2. Entrez 2 Afficher avec LiinkedList");
+        System.out.println("3. Entrez 3 pour revenir au menu");
+        System.out.println("4. Entrez 4 pour Quitter");
+        System.out.print(" choisissez une option : ");
 
     }
+
     /** Pour avoire le max */
     public int trieArray() {
-        int maximun = tab.get(0);// creation dune variable dit maximum initialiser avec tab[0]
+        int maximun = tab.get(0);
+        /** creation dune variable dit maximum initialiser avec tab[0] */
         /**
          * la condition est simple pour i=0 jusqua la taille du tableau 15,si tab[i] est
          * > a la valeur notre variable maximum ( initialiser a tab[0]) il prend la
@@ -61,6 +64,7 @@ public class TableauArray {
 
     }
 
+    /** La class IndexArray a ete creer pour retourner l index du max */
     public int IndexArray() {
         int maximun = tab.get(0);// creation dune variable dit maximum initialiser avec tab[0]
         int MaxInd = 0;
@@ -81,8 +85,12 @@ public class TableauArray {
     }
 
     public String toString() {
-        StringBuilder build = new StringBuilder("Tableau :\n"); // lien utile:
-                                                                // https://learn.microsoft.com/fr-fr/dotnet/standard/base-types/stringbuilder
+        StringBuilder build = new StringBuilder("Tableau :\n");
+        /**
+         * permet de concaténer des chaînes de caractères de manière optimisée
+         * lien utile:
+         * https://learn.microsoft.com/fr-fr/dotnet/standard/base-types/stringbuilder
+         */
         for (int i = 0; i < 15; i++) {
             /**
              * La méthode Append permet d’ajouter du texte ou une représentation sous forme

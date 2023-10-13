@@ -25,14 +25,18 @@ public class TableauLinkedList {
          * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random
          */
         for (int i = 0; i < 15; i++) {
-            int stockage = rand.nextInt(max - min + 1) + min; 
-            tab.add(stockage);/**https://stacklima.com/definir-la-methode-add-en-java-avec-des-exemples/#:~:text=La%20m%C3%A9thode%20add%20%28%29%20de%20Set%20en%20Java,False%20si%20l%E2%80%99%C3%A9l%C3%A9ment%20est%20d%C3%A9j%C3%A0%20pr%C3%A9sent%20dans%20l%E2%80%99ensemble. */
+            int stockage = rand.nextInt(max - min + 1) + min;
+            tab.add(stockage);/**
+                               * lien sur add
+                               * https://stacklima.com/definir-la-methode-add-en-java-avec-des-exemples/#:~:text=La%20m%C3%A9thode%20add%20%28%29%20de%20Set%20en%20Java,False%20si%20l%E2%80%99%C3%A9l%C3%A9ment%20est%20d%C3%A9j%C3%A0%20pr%C3%A9sent%20dans%20l%E2%80%99ensemble.
+                               */
         }
     }
 
     /** Pour avoire le max */
     public int trieLinked() {
-        int maximun = tab.get(0);// creation dune variable dit maximum initialiser avec tab[0]
+        int maximun = tab.get(0);
+        /** creation dune variable dit maximum initialiser avec tab[0] */
         /**
          * la condition est simple pour i=0 jusqua la taille du tableau 15,si tab[i] est
          * > a la valeur notre variable maximum ( initialiser a tab[0]) il prend la
@@ -51,6 +55,7 @@ public class TableauLinkedList {
 
     }
 
+    /** La class IndexLinked a ete creer pour retourner l index du max */
     public int IndexLinked() {
         int maximun = tab.get(0);// creation dune variable dit maximum initialiser avec tab[0]
         int MaxInd = 0;
@@ -65,14 +70,20 @@ public class TableauLinkedList {
                 MaxInd = i;
             }
         }
-        // lorsquon appelle la fonction trie il retournera automatiquement le maximum
+        /**
+         * lorsquon appelle la fonction trie il retournera automatiquement le maximum
+         */
         return MaxInd;
 
     }
 
     public String toString() {
-        StringBuilder build = new StringBuilder("Tableau :\n"); // lien utile:
-                                                                // https://learn.microsoft.com/fr-fr/dotnet/standard/base-types/stringbuilder
+        StringBuilder build = new StringBuilder("Tableau :\n");
+        /**
+         * permet de concaténer des chaînes de caractères de manière optimisée
+         * lien utile:
+         * https://learn.microsoft.com/fr-fr/dotnet/standard/base-types/stringbuilder
+         */
         for (int i = 0; i < 15; i++) {
             /**
              * La méthode Append permet d’ajouter du texte ou une représentation sous forme
